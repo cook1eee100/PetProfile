@@ -2,121 +2,71 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css?after" />
-<script type="text/javascript">
-	function checkForm() {
-		if (!document.newMember.id.value) {
-			alert("아이디를 입력하세요.");
-			return false;
+	<link rel="stylesheet" href="./resources/css/bootstrap.min.css?after" />
+	<script type="text/javascript">
+		function checkForm() {
+			if (!document.newMember.id.value) {
+				alert("아이디를 입력하세요.");
+				return false;
+			}
+	
+			if (!document.newMember.password.value) {
+				alert("비밀번호를 입력하세요.");
+				return false;
+			}
+	
+			if (document.newMember.password.value != document.newMember.password_confirm.value) {
+				alert("비밀번호를 동일하게 입력하세요.");
+				return false;
+			}
 		}
-
-		if (!document.newMember.password.value) {
-			alert("비밀번호를 입력하세요.");
-			return false;
-		}
-
-		if (document.newMember.password.value != document.newMember.password_confirm.value) {
-			alert("비밀번호를 동일하게 입력하세요.");
-			return false;
-		}
-	}
-</script>
-<title>회원 가입</title>
+	</script>
+	<title>회원 가입</title>
+	<style>
+		form label.reg {
+            font-size: 14px;
+            width: 120px;
+            float: left;
+        }
+		form fieldset {
+            margin: 10px 0px;
+        }
+        ul{
+	   		list-style:none;
+	   	}
+	</style>
 </head>
 <body>
-	<div class="footer-1">
-		<div class="container">
-			<h1 class="display-3">회원 가입</h1>
-		</div>
+	<div>
+		<h1>회원 가입</h1>
 	</div>
-
-	<div class="container">
-		<form name="newMember" class="form-horizontal"  action="processAddMember.jsp" method="post" onsubmit="return checkForm()">
-			<div class="row mt-3">
-				<label class="col-sm-2">아이디</label>
-				<div class="col-sm-3">
-					<input name="id" type="text" class="input-1" placeholder="id" >
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">비밀번호</label>
-				<div class="col-sm-3">
-					<input name="password" type="text" class="input-1" placeholder="password" >
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">비밀번호확인</label>
-				<div class="col-sm-3">
-					<input name="password_confirm" type="text" class="input-1" placeholder="password confirm" >
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">성명</label>
-				<div class="col-sm-3">
-					<input name="name" type="text" class="input-1" placeholder="name" >
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">성별</label>
-				<div class="col-sm-10">
-					<input name="gender" class="form-check-input" type="radio" value="남" /> 남 
-					<input name="gender" class="form-check-input" type="radio" value="여" /> 여
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">생일</label>
-				<div class="col-sm-4 ">
-					<input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6"> 
-					<select name="birthmm">
-						<option value="">월</option>
-						<option value="01">1</option>
-						<option value="02">2</option>
-						<option value="03">3</option>
-						<option value="04">4</option>
-						<option value="05">5</option>
-						<option value="06">6</option>
-						<option value="07">7</option>
-						<option value="08">8</option>
-						<option value="09">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-					</select> <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4">
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">이메일</label>
-				<div class="col-sm-10">
-					<input type="text" name="mail1" maxlength="50">@ 
-					<select name="mail2">
-						<option>naver.com</option>
-						<option>daum.net</option>
-						<option>gmail.com</option>
-						<option>nate.com</option>
-					</select>
-				</div>				
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2">전화번호</label>
-				<div class="col-sm-3">
+	
+	<div>
+		<form name="newMember" action="processAddMember.jsp" method="post" onsubmit="return checkForm()">
+			<ul>
+				<li> <label class="reg">아이디</label>
+					<input name="id" type="text" placeholder="id" >
+				</li>
+				<li> <label class="reg">비밀번호</label>
+					<input name="password" type="password" placeholder="password" >
+				</li>
+				<li> <label class="reg">비밀번호확인</label>
+					<input name="password_confirm" type="password" placeholder="password confirm" >
+				</li>
+				<li> <label class="reg">성명</label>
+					<input name="name" type="text" placeholder="name" >
+				</li>
+				<li> <label class="reg">전화번호</label>
 					<input name="phone" type="text" class="input-1" placeholder="phone" >
-
-				</div>
-			</div>
-			<div class="row mt-3">
-				<label class="col-sm-2 ">주소</label>
-				<div class="col-sm-5">
-					<input name="address" type="text" class="input-1" placeholder="address">
-
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="submit" class="btn btn-primary " value="등록 " > 
-					<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
-				</div>
+				</li>
+			</ul>
+			
+			<div>
+				<input type="submit" class="btn btn-primary " value="등록 " > 
+				<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
 			</div>
 		</form>
 	</div>
+
 </body>
 </html>

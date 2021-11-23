@@ -13,13 +13,9 @@
 				if (msg.equals("0"))
 					out.println("");
 				else if (msg.equals("1"))
-					out.println(" <script> alert('회원가입을 축하드립니다.'); location.href='loginMember.jsp';</script>");
-				else if (msg.equals("2")) {
-					String loginId = (String) session.getAttribute("sessionId");
-					out.println(" <script> alert('" + loginId + "님 환영합니다'); location.href='petProfile.jsp';</script>");
-					out.println(loginId);
+					out.println(" <script> alert('펫 등록이 완료 되었습니다.'); location.href='petProfile.jsp';</script>");
 				}
-			}
+			
 		%>
 	</div>	
 </body>

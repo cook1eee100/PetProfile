@@ -10,12 +10,12 @@
 %>
 
 <sql:setDataSource var="dataSource"
-	url="jdbc:mysql://localhost:3306/moneyweb"
+	url="jdbc:mysql://localhost:3306/petdb"
 	driver="com.mysql.jdbc.Driver" user="root" password="1234" />
 
 <sql:query dataSource="${dataSource}" var="resultSet">
-   SELECT * FROM MEMBER WHERE ID=? and password=?  
-   <sql:param value="<%=id%>" />
+  	SELECT * FROM MEMBER WHERE ID=? and password=?  
+  	<sql:param value="<%=id%>" />
 	<sql:param value="<%=password%>" />
 </sql:query>
 
