@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/resources/css/login.css?after">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login.css?after">
     <link rel="shortcut icon" href="images/dog.svg">
     <title>로그인</title>
 </head>

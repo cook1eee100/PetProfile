@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/resources/css/add.css?after">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add.css?after">
     <link rel="shortcut icon" href="images/dog.svg">
     <title>회원가입</title>
 </head>
