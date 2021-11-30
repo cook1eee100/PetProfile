@@ -76,13 +76,13 @@
 	                <br>
 	            </div>
 	            <br>
-	            <b>이름 : </b> ${name }
+	            <b>이름 : </b>${name }
 	            <br>
-	            <b> 성별 : </b> ${sex }
+	            <b> 성별 : </b>${sex }
 	            <br>
-	            <b> 나이 : </b> ${age }
+	            <b> 나이 : </b>${age }
 	            <br>
-	            <b> 체중 : </b> ${weight }
+	            <b> 체중 : </b>${weight }
 	            <br>
 	            <br>
 	            <br>
