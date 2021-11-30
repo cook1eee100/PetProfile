@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <header class="header">
             <a href="#none">
@@ -22,6 +21,7 @@
 				if (error != null) {
 					out.println("<script> alert('아이디와 비밀번호를 확인해 주세요'); </script>");
 				}
+				
 			%>
             <form action="processLoginMember.jsp" method="POST" class="loginForm">
                 <h2>Login</h2>
@@ -46,6 +46,8 @@
 	                    <p>
 	                        iot harness가 처음이신가요? <a href="addMember.jsp">회원가입</a>
 	                    </p>
+	                    
+	                    
 	                </div>
 	            </div>
 	        </form>

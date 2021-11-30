@@ -29,7 +29,12 @@
 				out.println(name + age);
 			}
 		}catch (SQLException ex){
-		
+			
+		}finally{
+			if (pstmt!=null)
+				pstmt.close();
+			if (conn!=null)
+				conn.close();
 		}
 		
 	%>

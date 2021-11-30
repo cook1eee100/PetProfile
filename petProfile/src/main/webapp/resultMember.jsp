@@ -14,7 +14,7 @@
 					out.println(" <script> alert('회원가입을 축하드립니다.'); location.href='loginMember.jsp';</script>");
 				else if (msg.equals("2")) {
 					String loginId = (String) session.getAttribute("sessionId");
-					out.println(" <script> alert('" + loginId + "님 환영합니다'); location.href='/pet/petProfile.jsp';</script>");
+					out.println(" <script> alert('" + loginId + "님 환영합니다'); location.href='list.jsp';</script>");
 					out.println(loginId);
 				}
 			}
