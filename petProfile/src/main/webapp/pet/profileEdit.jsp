@@ -63,7 +63,7 @@
 			
         %>
         <section class="section">
-	        <form action="/login" method="POST" class="loginForm">
+	        <form action="${pageContext.request.contextPath}/pet/processAddPet.jsp" method="POST" class="loginForm">
 	            <h2>프로필</h2>
 	            <div class="image">
 	                <br>
@@ -76,18 +76,20 @@
 	                <br>
 	            </div>
 	            <br>
-	            <b>이름 : </b>${name }
+	            <b>이름 : </b> <input name="name" type="text" value="<%=name %>" >
 	            <br>
-	            <b> 성별 : </b>${sex }
+	            <b> 성별 : </b> <input name="sex" type="text" value="<%=sex %>" >
 	            <br>
-	            <b> 나이 : </b>${age }
+	            <b> 나이 : </b> <input name="age" type="text" value="<%=age %>" >
 	            <br>
-	            <b> 체중 : </b>${weight }
-	            <br>
-	            <br>
+	            <b> 체중 : </b> <input name="weight" type="text" value="<%=weight %>" >
 	            <br>
 	            <br>
-	            <a href="profileEdit.jsp" class="btn">수정</a>
+	            <br>
+	            <br>
+	            <button type="submit" class="btn" style="width:100%">수정</button>
+	        </form>
+	            
     	</section>
 	</div>          
 </body>

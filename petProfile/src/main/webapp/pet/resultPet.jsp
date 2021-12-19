@@ -13,7 +13,7 @@
 				if (msg.equals("0"))
 					out.println("");
 				else if (msg.equals("1"))
-					out.println(" <script> alert('펫 등록이 완료 되었습니다.'); location.href='petProfile.jsp';</script>");
+					out.println(" <script> alert('펫 수정이 완료 되었습니다.'); location.href='profile.jsp';</script>");
 				}
 			
 		%>
